@@ -1,0 +1,16 @@
+DirectoryIndex index.php
+
+Options +FollowSymLinks -MultiViews 
+RewriteEngine on 
+RewriteRule ^(([^/]+/)*([^./]+))$ $1.php [L]
+
+#redirect to domain without www prefix
+RewriteCond %{http_host} ^www\.(.*) [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,NC,L]
+
+# Make sure there's no way of getting to this file
+<FilesMatch "\.htaccess$">
+Order deny,allow
+Deny from all
+Satisfy all
+</FilesMatch>
