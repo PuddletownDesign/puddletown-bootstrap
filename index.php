@@ -1,11 +1,12 @@
 <?php 
 $title = ''; 
 $description = '';
+$home = true;
 ?>
 <?php include 'includes/header.php'; ?>
 
-	<article>
+	<main>
 	   
-	</article>
+	</main>
 
 <?php include 'includes/footer.php'; ?>

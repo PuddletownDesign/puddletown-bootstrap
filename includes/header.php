@@ -15,9 +15,13 @@
 </head>
 <body>
 	<header>
-		<h1></h1>
-		
-		<nav>
+<?php if (isset($home)): ?>
+		<h1 class="logo"></h1>
+<?php else: ?>
+		<div class="logo"><a href="#"></a></div>
+<?php endif; ?>
+
+		<nav role="navigation">
 			<ul>
 				<li><a href="<?php echo $root; ?>"></a></li>
 			</ul>
