@@ -1,13 +1,21 @@
 html {
+	font-size: 110%;
 	
 }
 body {
 	header {
-
-		h1 {
-
+		
+		clear: both;
+		overflow: hidden;
+		border-bottom: 0px;
+		.logo {
+			max-width: 450px;
+			float: left;
+			margin: 0;
+			img {
+				
+			}
 		}
-
 	}
 
 	nav {
@@ -21,7 +29,17 @@ body {
 	}
 
 	main {
-
+		h1 {
+			text-align: left;
+		}
+		.tagline {
+			text-align: left;
+			
+			padding: 0 2em 1em;
+		}
+		h2 {
+			text-align: left;
+		}
 	}
 
 	footer {

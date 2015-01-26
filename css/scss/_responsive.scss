@@ -1,6 +1,8 @@
 /* ------------------------------------------------------
 		Responive Control
 ------------------------------------------------------ */
+@import 'responsive/_layout.scss';
+
 
 @media (min-width: 480px) {
 	@import 'responsive/_480.scss';

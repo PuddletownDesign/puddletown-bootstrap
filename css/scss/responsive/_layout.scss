@@ -1,0 +1,111 @@
+/* ---------------------------
+	  Layout
+--------------------------- */
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+}
+a {
+	color: $primary;
+}
+header {
+	padding: 2em 4% 0;
+	.logo {
+		float: left;
+		font-size: 1em;
+		display: block;
+		line-height: 1em;
+		z-index: 2;
+		max-width: 85%;
+		text-align: left;
+		margin-top: -10px;
+		img {
+			
+		}
+		
+	}
+	a.logo {
+		&:hover {
+			margin-top: 10px;
+			opacity:.8;
+			
+		}
+	}
+}
+
+nav {
+	clear: both;
+	ul {
+		list-style: none;
+		padding: 0;
+		overflow: hidden;
+		text-align: center;
+		background-color: $primary;
+		
+		li {
+			display: block;		
+			a {
+				
+				color: $white;
+				text-decoration: none;
+				padding: .7em 1.8em;
+				display: block;
+				border-right: 1px solid $white;
+				
+				&:hover {
+					background-color: $black;
+				}
+			}
+			&:first-child {
+				border-left: 1px solid $white;
+			}
+		}
+	}
+}
+
+main {
+	padding: 0 4%;
+	.tagline {
+		font: 100 1.3em/1.5em Cambria, Georgia, "Times New Roman", Times, serif;
+		color: $black;
+		text-align: center;
+		padding-bottom: .4em;
+	}
+	article {
+		h1 {
+			text-align: center;
+		}
+
+
+		h2 {
+			text-align: center;
+		}
+	}
+	
+}
+
+footer {
+	padding: 1em;
+	background-color: $primary;
+	color: $white;
+	text-align: center;
+	margin: 1em 0 0;
+	a {
+		color: $white;
+		text-decoration: none;
+	}
+	div {
+		padding: 1em;
+		font-size: .8em;
+	}
+	ul {
+		display: none;
+		li {
+			a {
+				
+			}
+		}
+	}
+}

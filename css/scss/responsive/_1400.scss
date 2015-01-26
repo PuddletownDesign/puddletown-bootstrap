@@ -1,27 +1,47 @@
 html {
+	font-size: 130%;
 	
 }
 body {
 	header {
-
-		h1 {
-
+		float: left;
+		clear: none;
+		position: fixed;
+		width: 20%;
+		top: 0px;
+		left: 0px;
+		.logo {
+			max-width: 120%;
+			margin-top: 1.5em;
+			margin-left: -40px;
 		}
 
 	}
 
 	nav {
+		border: 1px solid $white;
+		border-bottom: 0px;
 		ul {
 			li {
+				display: block;
+				float: none;
 				a {
-
+					border: 0px;
+					border-bottom: 1px solid $white;
 				}
 			}
 		}
 	}
 
 	main {
-
+		width:65%;
+		margin: 0 0 2em 25%;
+		padding-top: 2em;
+		.tagline {
+			border-bottom: 5px solid $primary;
+			padding: 0 0 1em 0;
+			margin: .5em 0;
+		}
 	}
 
 	footer {
