@@ -85,9 +85,12 @@ main {
 	}
 	
 }
-
+.push {
+	height: 155px;
+}
 footer {
-	padding: 1em;
+	padding: 1em 1em 0;
+	height: 155px;
 	background-color: $primary;
 	color: $white;
 	text-align: center;

@@ -14,6 +14,7 @@
 	<title><?php echo $title; ?></title>
 </head>
 <body>
+	<div class="wrapper">
 	<header>
 <?php if (isset($home)): ?>
 		<h1 class="logo"><img src="<?php echo $root; ?>css/graphics/logo.png" alt=""></h1>
