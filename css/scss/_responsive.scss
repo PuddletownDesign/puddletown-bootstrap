@@ -1,7 +1,7 @@
 /* ------------------------------------------------------
 		Responive Control
 ------------------------------------------------------ */
-@import 'responsive/_layout.scss';
+@import 'responsive/_0.scss';
 
 
 @media (min-width: 480px) {
@@ -27,4 +27,7 @@
 @media (min-width: 1400px) {
 	@import 'responsive/_1400.scss';
 	
+}
+@media (min-width: 1600px) {
+	@import 'responsive/_1600.scss';
 }
