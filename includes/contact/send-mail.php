@@ -7,7 +7,7 @@ if (class_exists('Mail')) {
 	 * make basic message body
 	 */
 	$body = <<<EOD
-sent from bathpartyband.com contact form	
+sent from your website contact form	
 ----------------------------------------
 
 $name writes,
@@ -21,13 +21,12 @@ EOD;
 
 	
 	//if all goes well then mail and submit the form
-	#$recipient = 'brent@puddletowndesign.com';
-	$recipient = 'bathpartyband@gmail.com';
+	$recipient = 'you@yoursite.com';
 	$headers['From'] = $email;
 	$headers['To'] = $recipient; 
-	$headers['Subject'] = 'email from bathpartyband.com';
+	$headers['Subject'] = 'email from your website';
 	
-	$params['host'] = "bathpartyband.com";
+	$params['host'] = "you@yoursite.com";
 	$params['port'] = 25;
 	$mail = Mail::factory('smtp', $params);
 	$mail->send($recipient, $headers, $body);
