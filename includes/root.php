@@ -1,6 +1,6 @@
 <?php
 
-$slashes_in_url = 3; //2 for http:// and 1 for localhost/
+$slashes_in_url = 4; //2 for http:// and 1 for localhost/
 
 $url = $_SERVER['REQUEST_URI'];
 $url_array = explode('/', $url);

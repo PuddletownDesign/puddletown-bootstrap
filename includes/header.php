@@ -17,10 +17,10 @@
 	<div class="wrapper">
 	<header>
 <?php if (isset($home)): ?>
-		<h1 class="logo"><img src="<?php echo $root; ?>css/graphics/logo.png" alt=""></h1>
+		<h1 class="logo"><img src="<?php echo $root; ?>images/logo.png" alt=""></h1>
 
 <?php else: ?>
-		<a class="logo" href="<?php echo $root; ?>"><img src="<?php echo $root; ?>css/graphics/logo.png" alt=""></a>
+		<a class="logo" href="<?php echo $root; ?>"><img src="<?php echo $root; ?>images/logo.png" alt=""></a>
 <?php endif; ?>
 		
 		<nav role="navigation">
