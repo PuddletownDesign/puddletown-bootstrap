@@ -1,13 +1,15 @@
 html {
-    
+    background-color: black;
 }
 body {
     font-size: 100%;
-    
+    padding: 1em;
+    margin: 1em;
+    background-color: blue;
 /* ---------------------------
       Basic Layout
 --------------------------- */
-    
+
     >header {
         nav {
             ul {
@@ -33,8 +35,8 @@ body {
       Common Assets
 --------------------------- */
 .button {
-    
-    
+
+
 }
 
 /* ---------------------------
