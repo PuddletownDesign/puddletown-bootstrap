@@ -1,33 +1,28 @@
 /* ------------------------------------------------------
 		Responive Control
 ------------------------------------------------------ */
-@import '../_0000.scss';
-
+@import '../0000';
 
 @media (min-width: 480px) {
-	@import '../_0480.scss';
-		
+	@import'../0480';
 }
 
 @media (min-width: 760px) {
-	@import '../_0760.scss';
-
+	@import'../0760';
 }
 
 @media (min-width: 980px) {
-	@import '../_0980.scss';
-	
+	@import'../0980';
 }
 
-@media (min-width: 1200px){
-	@import '../_1200.scss';
-	
+@media (min-width: 1200px) {
+	@import'../1200';
 }
 
 @media (min-width: 1400px) {
-	@import '../_1400.scss';
-	
+	@import'../1400';
 }
+
 @media (min-width: 1600px) {
-	@import '../_1600.scss';
+	@import'../1600';
 }
