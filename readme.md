@@ -5,7 +5,7 @@
 3.  Bare bones semantic HTML5 templates
 4.  Slicknav is already integrated
 
-Theme away! with the styles.css and index.html files.
+Theme away! Start with the styles.css and index.html files.
 
 # To use with sass and gulp with live reloading
 
