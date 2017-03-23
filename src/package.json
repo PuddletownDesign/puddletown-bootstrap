@@ -1,0 +1,22 @@
+{
+    "name": "Puddletown-Bootstrap",
+    "version": "1.0.0",
+    "dependencies": {},
+    "devDependencies": {
+        "gulp": "latest",
+        "gulp-concat": "latest",
+        "gulp-connect": "latest",
+        "gulp-sass": "latest",
+        "gulp-sourcemaps": "latest",
+        "gulp-uglify": "latest",
+        "gulp-util": "latest",
+        "gulp-autoprefixer": "latest",
+        "gulp-csso": "latest",
+        "gulp-filter": "latest",
+        "main-bower-files": "latest",
+        "gulp-useref": "latest",
+        "gulp-load-plugins": "latest",
+        "gulp-if": "latest",
+        "gulp-imagemin": "latest"
+    }
+}
