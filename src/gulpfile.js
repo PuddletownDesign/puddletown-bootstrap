@@ -76,7 +76,7 @@ gulp.task('copy', function() {
   	*/
   gulp.task('fonts', function() {
       gulp.src(fontSources)
-          .pipe(gulp.dest(outputDir+'images/'))
+          .pipe(gulp.dest(outputDir+'fonts/'))
           .pipe(connect.reload());
   });
 /*
