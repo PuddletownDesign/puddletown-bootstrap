@@ -1,4 +1,3 @@
-$border: 2px solid lighten($primary, 40%);
 /* Retina Mixins take css background images and load a version twice or 5 times as large
 	then shrinks the image to it's original size automatically depending if it's for retina display or print.
 	ex usage:
@@ -14,7 +13,6 @@ $border: 2px solid lighten($primary, 40%);
 --------------------------- */
 @mixin background-2x($color, $pathandname, $filetype, $x:top, $y:left, $repeat:none) {
 	background: $color url($pathandname + '.' + $filetype) $x $y $repeat;
-
 	@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5/1), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 1.5dppx) {
 		background: $color url($pathandname + '_2x.' + $filetype) $x $y $repeat;
 		background-size: 50% auto;
@@ -25,12 +23,10 @@ Retina & Print image swaps
 --------------------------- */
 @mixin background-5x($color, $pathandname, $filetype, $x:top, $y:left, $repeat:none) {
 	background: $color url($pathandname + '.' + $filetype) $x $y $repeat;
-
 	@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5/1), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 1.5dppx) {
 		background: $color url($pathandname + '_2x.' + $filetype) $x $y $repeat;
 		background-size: 50% auto;
 	}
-
 	@media only print {
 		background: $color url($pathandname + '_5x.' + $filetype) $x $y $repeat;
 		background-size: 20% auto;
