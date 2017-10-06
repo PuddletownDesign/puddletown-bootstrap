@@ -10,10 +10,15 @@ Install project dependencies
 npm install
 ```
 
+<<<<<<< HEAD
 _I prefer `pnpm`. It's a lot more sane approach to `node_modules`_
 
 Setting up a fresh git repo
 
+=======
+Setting up a fresh git repo
+
+>>>>>>> 92cbee0d8db3877405cc5010e1d9d4e96856c1d5
 ```bash
 npm run setup
 ```
