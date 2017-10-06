@@ -10,6 +10,7 @@ const htmlmin = require('gulp-htmlmin')
 const imagemin = require('gulp-imagemin')
 const webpack = require('webpack-stream')
 const connect = require('gulp-connect')
+const svgmin = require('gulp-svgmin')
 
 /**
  * Input Sources
@@ -162,6 +163,11 @@ gulp.task('build', () => {
   // images
   gulp.src(imageSources)
     .pipe(imagemin())
+    .pipe(gulp.dest(dist + 'images/'))
+
+  // svgs
+  gulp.src(imageSources + '**/*.svg')
+    .pipe(svgmin())
     .pipe(gulp.dest(dist + 'images/'))
 
   // fonts

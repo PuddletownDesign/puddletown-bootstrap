@@ -1,10 +1,12 @@
 html {}
 
 body {
-	background-color: black;
-	color: white;
 	font-size: 100%;
 	padding: 2em;
+
+	> img {
+		max-height: 5em;
+	}
 
 	> header {
 		h1 {
