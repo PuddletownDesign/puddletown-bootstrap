@@ -39,7 +39,7 @@ npm test
 To build the project final build for distribution
 
 ```bash
-npm build
+npm run build
 ```
 
-Enjoy the SASS and bundled javascript!
+**Enjoy the SASS and bundled javascript!**
