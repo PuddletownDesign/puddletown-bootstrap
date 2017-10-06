@@ -1,22 +1,44 @@
 {
-    "name": "Puddletown-Bootstrap",
+    "name": "webpack-env",
     "version": "1.0.0",
-    "dependencies": {},
+    "description": "enviornment to experiement and build with es6",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "setup": "npm i && rimraf .git && git init && npm start",
+        "start": "rimraf build && gulp",
+        "test": "mocha",
+        "build": "rimraf dist && gulp build && webpack -p"
+    },
+    "keywords": [
+        "js",
+        "webpack",
+        "mocha"
+    ],
+    "author": "Brent",
+    "license": "ISC",
     "devDependencies": {
+        "babel-core": "latest",
+        "babel-loader": "latest",
+        "babel-preset-es2015": "latest",
+        "chai": "latest",
         "gulp": "latest",
-        "gulp-concat": "latest",
+        "gulp-autoprefixer": "latest",
         "gulp-connect": "latest",
+        "gulp-htmlmin": "latest",
+        "gulp-imagemin": "latest",
         "gulp-sass": "latest",
         "gulp-sourcemaps": "latest",
-        "gulp-uglify": "latest",
         "gulp-util": "latest",
-        "gulp-autoprefixer": "latest",
-        "gulp-csso": "latest",
-        "gulp-filter": "latest",
-        "main-bower-files": "latest",
-        "gulp-useref": "latest",
-        "gulp-load-plugins": "latest",
-        "gulp-if": "latest",
-        "gulp-imagemin": "latest"
+        "mocha": "latest",
+        "rimraf": "latest",
+        "webpack": "latest",
+        "webpack-dev-server": "latest",
+        "webpack-stream": "latest"
+    },
+    "dependencies": {
+        "jquery": "^3.2.1"
     }
 }
