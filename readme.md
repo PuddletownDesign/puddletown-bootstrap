@@ -1,19 +1,45 @@
-#Puddletown Bootstrap framework
+# Puddletown UI Bootstrap
 
-1.  quick and easy typography with a grid
-2.  puddletown reset
-3.  Bare bones semantic HTML5 templates
-4.  Slicknav is already integrated
+UI development environment with webpack. Produces fully optimized dist directories.
 
-Theme away! Start with the styles.css and index.html files.
+## Getting started
 
-# To use with sass and gulp with live reloading
+Install project dependencies
 
-1.  Make sure node.js is installed.
-2.  Run `npm install` inside the project directory.
-3.  Run `gulp` inside the project directory.
+```bash
+npm install
+```
 
-# Create a new git repo
+_I prefer `pnpm`. It's a lot more sane approach to `node_modules`_
 
-1.  `rm -rf .git`
-2.  `git init`
+Setting up a fresh git repo
+
+```bash
+npm run setup
+```
+
+To start the project
+
+```bash
+npm start
+```
+
+and navigate to:
+
+<http://localhost:8080>
+
+Edit the files in the `src` directory
+
+To run tests on your javascript using mocha
+
+```bash
+npm test
+```
+
+To build the project final build for distribution
+
+```bash
+npm build
+```
+
+Enjoy the SASS and bundled javascript!

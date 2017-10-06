@@ -1,114 +1,170 @@
-/*
-  Gulp Modules
-*/
-
+/**
+ * Gulp Modules
+ */
 const gulp = require('gulp')
-const gutil = require('gulp-util')
-const sourcemaps = require('gulp-sourcemaps')
 const sass = require('gulp-sass')
-const connect = require('gulp-connect')
-const uglify = require('gulp-uglify')
-// const concat = require('gulp-concat')
 const autoprefixer = require('gulp-autoprefixer')
-// const filter = require('gulp-filter')
-// const mainBowerFiles = require('main-bower-files')
-const useref = require('gulp-useref')
-const csso = require('gulp-csso')
-const gulpIf = require('gulp-if')
-// const imagemin = require('gulp-imagemin')
+const sourcemaps = require('gulp-sourcemaps')
+const gutil = require('gulp-util')
+const htmlmin = require('gulp-htmlmin')
+const imagemin = require('gulp-imagemin')
+const webpack = require('webpack-stream')
+const connect = require('gulp-connect')
 
-/*
-  Input Sources
-*/
-
-const jsSources = ['src/js/**/*.js']
-const sassSources = ['src/scss/**/*.scss']
+/**
+ * Input Sources
+ */
+const txtSources = ['src/robots.txt', 'src/favicon.ico']
 const htmlSources = ['src/**/*.html']
-const imageSources = ['src/images/**/*.+(png|jpg|gif|svg)', '*.ico']
-const txtSources = ['src/.htaccess', 'src/robots.txt']
+const cssSources = ['src/scss/**/*.scss']
+const imageSources = ['src/images/**/*']
 const fontSources = ['src/fonts/**/*']
-const outputDir = 'build/'
+const jsSources = ['src/js/app.js']
 
-/*
-  Files to watch for updates to reload the page
-*/
+/**
+ * Output
+ * build - build testing
+ * dist - final production site
+ */
+const build = 'build/'
+const dist = 'dist/'
 
-gulp.task('watch', function () {
-  gulp.watch(jsSources, ['js'])
-  gulp.watch(sassSources, ['sass'])
-  gulp.watch(htmlSources, ['html'])
-  gulp.watch(imageSources, ['(png|jpg|gif|svg|ico)'])
-  gulp.watch(txtSources, ['(htaccess|txt)'])
-})
+/**
+ * --------------------------------
+ * Development File Tasks - /build/
+ * --------------------------------
+ */
 
-/*
-  How to connect to the gulp server
-*/
-gulp.task('connect', function () {
+/**
+ * Server (webpack Dev server)
+ */
+gulp.task('server', () => {
   connect.server({
-    root: 'build/',
+    root: build,
     livereload: true
   })
 })
 
-// File Tasks ------------------------
+/**
+ * Deafult
+ */
+gulp.task('default', ['html', 'js', 'sass', 'fonts', 'images', 'txt', 'watch', 'server'])
 
-/* Copy Files */
-gulp.task('copy', function () {
-  gulp.src(txtSources)
-    .pipe(gulp.dest(outputDir))
+/**
+ * Dev Watchers
+ */
+gulp.task('watch', () => {
+  gulp.watch(txtSources, ['txt'])
+  gulp.watch(jsSources, ['js'])
+  gulp.watch(htmlSources, ['html'])
+  gulp.watch(cssSources, ['sass'])
+  gulp.watch(imageSources, ['images'])
+  gulp.watch(fontSources, ['fonts'])
+})
+
+/**
+ * Javascript (Webpack)
+ */
+gulp.task('js', () => {
+  gulp.src(jsSources)
+    .pipe(webpack(require('./webpack.config.js')))
+    .pipe(gulp.dest(build))
     .pipe(connect.reload())
 })
 
-/* Images */
-gulp.task('images', function () {
-  gulp.src(imageSources)
-         .pipe(gulp.dest(outputDir + 'images/'))
-         .pipe(connect.reload())
+/**
+ * CSS / SASS (Dev)
+ */
+gulp.task('sass', () => {
+  gulp.src(cssSources)
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .on('error', gutil.log)
+    .pipe(autoprefixer({
+      browsers: ['last 5 versions'],
+      cascade: false
+    }))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(build))
+    .pipe(connect.reload())
+})
+/**
+ * Text Sources
+ */
+gulp.task('txt', () => {
+  gulp.src(txtSources)
+    .pipe(gulp.dest(build))
+    .pipe(connect.reload())
 })
 
-/* Fonts */
-gulp.task('fonts', function () {
-  gulp.src(fontSources)
-          .pipe(gulp.dest(outputDir + 'fonts/'))
-          .pipe(connect.reload())
-})
-/* HTML */
-
-gulp.task('html', function () {
+/**
+ * Html Sources (Dev)
+ */
+gulp.task('html', () => {
   gulp.src(htmlSources)
-        .pipe(gulp.dest(outputDir))
-        .pipe(connect.reload())
+    .pipe(gulp.dest(build))
+    .pipe(connect.reload())
 })
 
-/* SCSS */
-
-gulp.task('sass', function () {
-  gulp.src(sassSources)
-        .pipe(sourcemaps.init())
-        .pipe(sass({
-          outputStyle: 'compressed'
-        }))
-        .on('error', gutil.log)
-        .pipe(autoprefixer({
-          browsers: ['last 3 versions'],
-          cascade: false
-        }))
-        .pipe(csso())
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(outputDir))
-        .pipe(connect.reload())
+/**
+ * Image Sources
+ */
+gulp.task('images', () => {
+  gulp.src(imageSources)
+    .pipe(gulp.dest(build + 'images/'))
+    .pipe(connect.reload())
 })
 
-/* Javascript */
-gulp.task('js', function () {
-  gulp.src(jsSources)
-        .pipe(useref())
-        .pipe(gulpIf('*.js', uglify()))
-        .pipe(gulp.dest(outputDir))
-        .pipe(connect.reload())
+/**
+ * Font Sources
+ */
+gulp.task('fonts', () => {
+  gulp.src(fontSources)
+    .pipe(gulp.dest(build + 'fonts/'))
+    .pipe(connect.reload())
 })
 
-/* Set the default task */
+/**
+ * --------------------------------
+ * Build File Tasks - /dist/
+ * clean dist directory
+ * production javascript/ shaken, transpiled
+ * compress/shake css ( no source maps)
+ * compress images
+ * minify html
+ * --------------------------------
+ */
+gulp.task('build', () => {
+  // js - called from npm scripts
 
-gulp.task('default', ['html', 'js', 'sass', 'images', 'fonts', 'copy', 'connect', 'watch'])
+  // css
+  gulp.src(cssSources)
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }))
+    .pipe(autoprefixer({
+      browsers: ['last 5 versions'],
+      cascade: false
+    }))
+    .pipe(gulp.dest(dist))
+
+  // txt
+  gulp.src(txtSources)
+    .pipe(gulp.dest(dist))
+
+  // html
+  gulp.src(htmlSources)
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(gulp.dest(dist))
+
+  // images
+  gulp.src(imageSources)
+    .pipe(imagemin())
+    .pipe(gulp.dest(dist + 'images/'))
+
+  // fonts
+  gulp.src(fontSources)
+    .pipe(gulp.dest(dist + 'fonts/'))
+})

@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="styles.css" rel="stylesheet">
-	<!-- build:js main.js -->
-	<script src="../src/bower_components/jquery/dist/jquery.min.js" defer></script>
-	<script src="../src/js/main.js" defer></script>
-	<!-- endbuild -->
-	<title>Puddletown</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="styles.css" rel="stylesheet">
+<title>Webpack JS testing</title>
 </head>
-
 <body>
+	<img src="images/logo.png" alt="">
+	<h1>Puddletown UI Bootstrap</h1>
+	
+	<p>UI development environment with webpack. Produces fully optimized dist directories.</p>
 
-	<header>
-		<h1>
-			<a href="./" rel="home"><img src="images/logo.png" alt=""></a>
-		</h1>
-		<nav>
-			<ul>
-				<li><a href="contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<h2>Getting started</h2>
 
-	<main>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	</main>
+	<p>Install project dependencies</p>
+
+	<pre><code>npm install</code></pre>
+	
+	<p><em>I prefer <code>pnpm</code>. It's a lot more sane approach to <code>node_modules</code></em></p>
+
+	<p>Setting up a fresh git repo</p>
+
+	<pre><code>npm run setup</code></pre>
+
+	<p>To start the project</p>
+
+	<pre><code>npm start</code></pre>
+
+	<p>and navigate to:</p>
+
+	<a href="http://localhost:8080">http://localhost:8080</a>
+
+	<p>Edit the files in the `src` directory</p>
+
+	<h3>To run tests on your javascript using mocha</h3>
+
+	<pre><code>npm test</code></pre>
+
+	<p>To build the project final build for distribution</p>
+
+	<pre><code>npm build</code></pre>
+
+	<p><strong>Enjoy the SASS and bundled javascript!</strong></p>
 
 
-	<footer>&copy; 2017</footer>
+
+<script src="bundle.js"></script>
 </body>
-
 </html>
