@@ -3,6 +3,8 @@ html {}
 body {
 	font-size: 100%;
 	padding: 2em;
+	background-color: $white;
+	color: $black;
 
 	> img {
 		max-height: 5em;

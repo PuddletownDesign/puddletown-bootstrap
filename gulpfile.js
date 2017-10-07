@@ -136,7 +136,7 @@ gulp.task('fonts', () => {
  * --------------------------------
  */
 gulp.task('build', () => {
-  // js - called from npm scripts
+  // js - called from npm scripts webpack -p
 
   // css
   gulp.src(cssSources)

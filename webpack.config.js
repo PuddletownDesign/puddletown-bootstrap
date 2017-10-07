@@ -2,7 +2,7 @@
  * Requires
  */
 const path = require('path')
-// const webpack = require('webpack')
+const webpack = require('webpack')
 
 /**
  * Webpack config
@@ -14,6 +14,12 @@ module.exports = {
     // publicPath: 'src',
     filename: 'bundle.js'
   },
+  plugins: [
+    new webpack.ContextReplacementPlugin(
+      /highlight\.js\/lib\/languages$/,
+      new RegExp(`^./(${['javascript', 'css', 'bash'].join('|')})$`)
+    )
+  ],
   module: {
     loaders: [
       {

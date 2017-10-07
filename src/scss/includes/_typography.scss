@@ -44,10 +44,15 @@ h6 {
 dl,
 ol,
 p,
+pre,
 ul {
 	font-size: 1em;
 	line-height: 1.57em;
 	padding-bottom: 1.2em;
 	padding-top: .47em;
 	/* 	padding-top: 1.97em; */
+}
+
+pre {
+	padding-bottom: 2.2em;
 }
