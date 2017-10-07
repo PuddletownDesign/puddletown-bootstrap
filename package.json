@@ -7,13 +7,13 @@
         "test": "test"
     },
     "scripts": {
-        "setup": "npm i && rimraf .git && git init && npm start",
+        "setup": "npm install && rimraf .git && git init && npm start",
         "start": "rimraf build && gulp",
         "test": "mocha",
         "build": "rimraf dist && gulp build && webpack -p"
     },
     "keywords": [
-        "js",
+        "UI",
         "webpack",
         "mocha"
     ],
@@ -22,7 +22,7 @@
     "devDependencies": {
         "babel-core": "latest",
         "babel-loader": "latest",
-        "babel-preset-es2015": "latest",
+        "babel-preset-env": "latest",
         "chai": "latest",
         "gulp": "latest",
         "gulp-autoprefixer": "latest",
@@ -40,6 +40,7 @@
         "webpack-stream": "latest"
     },
     "dependencies": {
+        "highlight.js": "latest",
         "jquery": "latest"
     }
 }
