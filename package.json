@@ -1,7 +1,7 @@
 {
-    "name": "webpack-env",
+    "name": "puddletown-ui-bootstrap",
     "version": "1.0.0",
-    "description": "enviornment to experiement and build with es6",
+    "description": "UI Bootstrap for templating and front end development",
     "main": "index.js",
     "directories": {
         "test": "test"
