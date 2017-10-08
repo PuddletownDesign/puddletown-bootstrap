@@ -1,23 +1,31 @@
 {
     "name": "puddletown-ui-bootstrap",
-    "version": "1.0.0",
+    "author": "Brent",
+    "license": "MIT",
+    "version": "1.0.1",
     "description": "UI Bootstrap for templating and front end development",
-    "directories": {
-        "test": "test"
-    },
-    "scripts": {
-        "setup": "npm install && rimraf .git && git init && npm start",
-        "start": "rimraf build && gulp",
-        "test": "mocha",
-        "build": "rimraf dist && gulp build && webpack -p"
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/PuddletownDesign/puddletown-bootstrap.git"
     },
     "keywords": [
         "UI",
         "webpack",
         "mocha"
     ],
-    "author": "Brent",
-    "license": "ISC",
+    "scripts": {
+        "setup": "npm install && rimraf .git && git init && npm start",
+        "start": "rimraf build && gulp",
+        "test": "mocha",
+        "build": "rimraf dist && gulp build && webpack -p"
+    },
+    "directories": {
+        "test": "test"
+    },
+    "dependencies": {
+        "highlight.js": "latest",
+        "jquery": "latest"
+    },
     "devDependencies": {
         "babel-core": "latest",
         "babel-loader": "latest",
@@ -36,9 +44,5 @@
         "rimraf": "latest",
         "webpack": "latest",
         "webpack-stream": "latest"
-    },
-    "dependencies": {
-        "highlight.js": "latest",
-        "jquery": "latest"
     }
 }
