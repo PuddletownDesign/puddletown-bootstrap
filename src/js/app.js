@@ -1,4 +1,4 @@
-// import $ from 'jquery'
+import $ from 'jquery'
 // import utils from './calc'
 // import cleanurl from './cleanurl'
 
@@ -9,7 +9,7 @@ import hljs from 'highlight.js/lib/highlight'
   const langModule = require(`highlight.js/lib/languages/${langName}`)
   hljs.registerLanguage(langName, langModule)
 })
+hljs.initHighlightingOnLoad()
 
 /* Example jQuery Loader */
-// $('h1').text('Puddletown UI Bootstrap 👢')
-hljs.initHighlightingOnLoad()
+$('h1').text('Puddletown UI Bootstrap 👢')

@@ -1,9 +1,19 @@
+code {
+    padding: .2em .4em;
+    color: $cyan;
+    background-color: $black;
+}
+
 pre {
     font-size: 110%;
     line-height: 1.5em;
     background: $black;
-    padding: 1em;
     margin: 1em 0 2em;
+
+    code {
+        border: 0;
+        padding: 0;
+    }
 }
 
 .hljs {

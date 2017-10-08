@@ -2,7 +2,6 @@
     "name": "puddletown-ui-bootstrap",
     "version": "1.0.0",
     "description": "UI Bootstrap for templating and front end development",
-    "main": "index.js",
     "directories": {
         "test": "test"
     },
@@ -36,7 +35,6 @@
         "mocha": "latest",
         "rimraf": "latest",
         "webpack": "latest",
-        "webpack-dev-server": "latest",
         "webpack-stream": "latest"
     },
     "dependencies": {

@@ -1,5 +1,13 @@
 html {}
 
+a {
+	color: $blue;
+
+	&:visited {
+		color: $magenta;
+	}
+}
+
 body {
 	font-size: 100%;
 	padding: 2em;

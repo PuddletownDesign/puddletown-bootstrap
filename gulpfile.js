@@ -8,9 +8,9 @@ const sourcemaps = require('gulp-sourcemaps')
 const gutil = require('gulp-util')
 const htmlmin = require('gulp-htmlmin')
 const imagemin = require('gulp-imagemin')
+const svgmin = require('gulp-svgmin')
 const webpack = require('webpack-stream')
 const connect = require('gulp-connect')
-const svgmin = require('gulp-svgmin')
 
 /**
  * Input Sources
