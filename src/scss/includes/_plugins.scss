@@ -1,6 +1,6 @@
 code {
     padding: .2em .4em;
-    color: $cyan;
+    color: $white;
     background-color: $black;
 }
 
@@ -9,6 +9,7 @@ pre {
     line-height: 1.5em;
     background: $black;
     margin: 1em 0 2em;
+    padding: 1em;
 
     code {
         border: 0;
