@@ -14,12 +14,6 @@ module.exports = {
     // publicPath: 'src',
     filename: 'bundle.js'
   },
-  plugins: [
-    new webpack.ContextReplacementPlugin(
-      /highlight\.js\/lib\/languages$/,
-      new RegExp(`^./(${['javascript', 'css', 'bash'].join('|')})$`)
-    )
-  ],
   module: {
     loaders: [
       {
