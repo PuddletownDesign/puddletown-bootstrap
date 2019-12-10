@@ -23,26 +23,26 @@
         "test": "test"
     },
     "dependencies": {
-        "highlight.js": "latest",
-        "jquery": "latest"
+        "highlight.js": "^9.16.2",
+        "jquery": "^3.4.1"
     },
     "devDependencies": {
-        "babel-core": "latest",
-        "babel-loader": "latest",
-        "babel-preset-env": "latest",
-        "chai": "latest",
-        "gulp": "latest",
-        "gulp-autoprefixer": "latest",
-        "gulp-connect": "latest",
-        "gulp-htmlmin": "latest",
-        "gulp-imagemin": "latest",
-        "gulp-sass": "latest",
-        "gulp-sourcemaps": "latest",
-        "gulp-svgmin": "^1.2.4",
-        "gulp-util": "latest",
-        "mocha": "latest",
-        "rimraf": "latest",
-        "webpack": "latest",
-        "webpack-stream": "latest"
+        "babel-core": "^6.26.3",
+        "babel-loader": "^6",
+        "babel-preset-env": "^1.7.0",
+        "chai": "^4.2.0",
+        "gulp": "^3",
+        "gulp-autoprefixer": "^5",
+        "gulp-connect": "^5.7.0",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-imagemin": "^6.2.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-sourcemaps": "^2.6.5",
+        "gulp-svgmin": "^2.2.0",
+        "gulp-util": "^3.0.8",
+        "mocha": "^6.2.2",
+        "rimraf": "^3.0.0",
+        "webpack": "^3",
+        "webpack-stream": "^3"
     }
 }
