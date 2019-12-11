@@ -1,6 +1,9 @@
-'use strict'
+/**
+ * A slightly more complicated testing example, using nested tests for each function
+ */
 
-/* global describe, it, expect */
+'use strict'
+/* global describe, it */
 
 var expect = require('chai').expect
 const obj = require('../src/js/cleanurl')
@@ -38,7 +41,7 @@ describe('replaceSpecialCharaters', () => {
   })
 })
 
-describe('make', () => {
+describe('make function', () => {
   var fn = obj.make
 
   it('should replaces all spaces ith hyphens', () => {

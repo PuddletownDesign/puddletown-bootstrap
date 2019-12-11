@@ -1,5 +1,9 @@
-/* global describe, it */
+/**
+ * A very simple unit test example
+ */
+
 'use strict'
+/* global describe, it */
 
 var expect = require('chai').expect
 const obj = require('../src/js/calc.js')

@@ -28,21 +28,20 @@
     },
     "devDependencies": {
         "babel-core": "^6.26.3",
-        "babel-loader": "^6",
+        "babel-loader": "^6.4.1",
         "babel-preset-env": "^1.7.0",
         "chai": "^4.2.0",
-        "gulp": "^3",
-        "gulp-autoprefixer": "^5",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^5.0.0",
         "gulp-connect": "^5.7.0",
         "gulp-htmlmin": "^5.0.1",
         "gulp-imagemin": "^6.2.0",
         "gulp-sass": "^4.0.2",
         "gulp-sourcemaps": "^2.6.5",
         "gulp-svgmin": "^2.2.0",
-        "gulp-util": "^3.0.8",
         "mocha": "^6.2.2",
         "rimraf": "^3.0.0",
-        "webpack": "^3",
-        "webpack-stream": "^3"
+        "webpack": "^3.12.0",
+        "webpack-stream": "^3.2.0"
     }
 }

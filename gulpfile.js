@@ -5,7 +5,6 @@ const gulp = require('gulp')
 const sass = require('gulp-sass')
 const autoprefixer = require('gulp-autoprefixer')
 const sourcemaps = require('gulp-sourcemaps')
-const gutil = require('gulp-util')
 const htmlmin = require('gulp-htmlmin')
 const imagemin = require('gulp-imagemin')
 const svgmin = require('gulp-svgmin')
@@ -79,8 +78,7 @@ gulp.task('js', () => {
 gulp.task('sass', () => {
   gulp.src(cssSources)
     .pipe(sourcemaps.init())
-    .pipe(sass())
-    .on('error', gutil.log)
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 5 versions'],
       cascade: false
